@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url("sus.png");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        document.addEventListener('contextmenu', event => {
+            event.preventDefault();
+        });
+
+        document.addEventListener('keydown', event => {
+            if (event.key === 'F12' || (event.ctrlKey && event.shiftKey && event.key === 'I')) {
+                event.preventDefault();
+            }
+        });
+
+        // Check the referrer URL and redirect if necessary
+        if (document.referrer.indexOf("theimposterisverysus.github.io") === -1) {
+            window.location.href = "https://theimposterisverysus.github.io";
+        }
+    </script>
+</body>
+</html>
